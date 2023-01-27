@@ -1,6 +1,12 @@
 # Climate_News_Scraper_ETL
 Using this project one is capable of scraping the [BBC News](https://www.bbc.com/news/science-environment-56837908) website for the latest updates on climate. The scraper functionality is packed in an ETL pipeline build on Prefect and Dask in order to load the scraped news articles in a SQL Lite database.
 
+### Webscraping
+For webscraping the libraries *requests* and *beautifulsoup* are used. Only the latest articles can be scraped, therefore the script is intended to run on a periodic schedule. 
+
+### ETL
+*Prefect* is used for orchestration of the ETL flow. The flow an easily be monitored from the Prefect Cloud platform. 
+
 ### Sentiment classification
 Using the TextBlob library the sentiment (negative/neutral/positive) is added to each article. 
 
