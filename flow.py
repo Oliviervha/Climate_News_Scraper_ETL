@@ -64,24 +64,26 @@ def load_news(df) -> None:
     cursor = conn.cursor()
 
     # Creating table (if not exists)
-    table = """ CREATE TABLE IF NOT EXISTS CLIMATENEWS (
+    table = ''' CREATE TABLE IF NOT EXISTS CLIMATENEWS (
                     title VARCHAR(255) NOT NULL,
                     content VARCHAR(255) NOT NULL,
                     date DATETIME() NOT NULL,
                     sentiment VARCHAR(8) NOT NULL
-            ); """
+                    CONSTRAINT primary_key_constr PRIMARY KEY (title, date)
+            ); '''
     cursor.execute(table)
     
     # Insert data
-    insert_query = ''' INSERT OR IGNORE INTO CLIMATENEWS(title,content,date,sentiment)
-              VALUES {}'''.format(df.compute().to_records(index=False))
-    cursor.execute(insert_query)
+    for record in df.compute().to_records(index=False):
+        insert_query = ''' INSERT OR IGNORE INTO CLIMATENEWS(title,content,date,sentiment)
+                VALUES {}'''.format(record)
+        cursor.execute(insert_query)
     
     # Commit the transaction
     conn.commit()
     
-    # Check
-    # print(pd.read_sql("SELECT * FROM CLIMATENEWS, conn))
+    # Read table
+    # print(pd.read_sql(''' SELECT * FROM CLIMATENEWS ''', conn))
     
     # Close the connection
     conn.close()
