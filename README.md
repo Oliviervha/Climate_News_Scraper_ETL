@@ -13,9 +13,9 @@ Using the TextBlob library the sentiment (negative/neutral/positive) is added to
 ### Database
 All scraped articles will be written to a local [SQLite](https://sqlite.org/index.html) database in the load stage of the ETL flow. No duplicate entries are allowed. Here is an example of a record inserted into the CLIMATENEWS table.
 
-{
-  "title" : "Warning climate change impacting on avalanche risk",
-  "content" : "Forecasters said a likely effect in Scotland was avalanches occurring in tighter periods of time."
-  "date" : "2023-01-27T06:04:00.000000000"
-  "sentiment" : "Negative"
+{ \n
+  "title" : "Warning climate change impacting on avalanche risk", \n
+  "content" : "Forecasters said a likely effect in Scotland was avalanches occurring in tighter periods of time.", \n
+  "date" : "2023-01-27T06:04:00.000000000", \n
+  "sentiment" : "Negative" \n
 }
