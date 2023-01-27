@@ -1,7 +1,6 @@
 # dependencies for climate_news_scraper_etl
 pandas==1.4.3
 prefect==2.7.9
-prefect-dask==0.2.2
 dask==2023.1.0
 beautifulsoup4==4.11.1
 textblob==0.17.1
