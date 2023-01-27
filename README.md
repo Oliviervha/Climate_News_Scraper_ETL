@@ -11,6 +11,11 @@ For webscraping the libraries *requests* and *beautifulsoup* are used. Only the 
 Using the TextBlob library the sentiment (negative/neutral/positive) is added to each article. 
 
 ### Database
-All scraped articles will be written to a local [SQLite](https://sqlite.org/index.html) database in the load stage of the ETL flow. No duplicate entries are allowed. Here is the output of a select query on the CLIMATENEWS table 
+All scraped articles will be written to a local [SQLite](https://sqlite.org/index.html) database in the load stage of the ETL flow. No duplicate entries are allowed. Here is an example of a record inserted into the CLIMATENEWS table.
 
-'''SELECT * FROM CLIMATENEWS'''
+{
+  "title" : "Warning climate change impacting on avalanche risk",
+  "content" : "Forecasters said a likely effect in Scotland was avalanches occurring in tighter periods of time."
+  "date" : "2023-01-27T06:04:00.000000000"
+  "sentiment" : "Negative"
+}
