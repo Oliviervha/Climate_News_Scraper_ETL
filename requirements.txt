@@ -5,3 +5,4 @@ prefect-dask==0.2.2
 dask==2023.1.0
 beautifulsoup4==4.11.1
 textblob==0.17.1
+pysqlite3==0.5.0
