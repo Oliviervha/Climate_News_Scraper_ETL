@@ -11,6 +11,6 @@ For webscraping the libraries *requests* and *beautifulsoup* are used. Only the 
 Using the TextBlob library the sentiment (negative/neutral/positive) is added to each article. 
 
 ### Database
-All scraped articles will be written to a local SQLite database in the load stage of the ETL flow. No duplicate entries are allowed. Here is the output of a select query on the CLIMATENEWS table 
+All scraped articles will be written to a local [SQLite](https://sqlite.org/index.html) database in the load stage of the ETL flow. No duplicate entries are allowed. Here is the output of a select query on the CLIMATENEWS table 
 
 '''SELECT * FROM CLIMATENEWS'''
