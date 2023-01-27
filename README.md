@@ -5,7 +5,7 @@ Using this project one is capable of scraping the [BBC News](https://www.bbc.com
 For webscraping the libraries *requests* and *beautifulsoup* are used. Only the latest articles can be scraped, therefore the script is intended to run on a periodic schedule. 
 
 ### ETL
-*Prefect* is used for orchestration of the ETL flow. The flow an easily be monitored from the Prefect Cloud platform. 
+*Prefect* is used for orchestration of the ETL flow. The flow an easily be monitored from the [Prefect Cloud](https://www.prefect.io/cloud/) platform. 
 
 ### Sentiment classification
 Using the TextBlob library the sentiment (negative/neutral/positive) is added to each article. 
