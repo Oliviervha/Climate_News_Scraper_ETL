@@ -2,4 +2,6 @@
 Using this project one is capable of scraping the [BBC News](https://www.bbc.com/news/science-environment-56837908) website for the latest updates on climate. The scraper functionality is packed in an ETL pipeline build on Prefect and Dask in order to load the scraped news articles in a SQL Lite database.
 
 TODO:
-Create an SQL Lite database structure to load the scraped dataframe to. 
+* add table with news articles
+* add example of output
+* add section on sentiment analysis
