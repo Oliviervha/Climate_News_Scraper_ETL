@@ -6,6 +6,8 @@ For webscraping the libraries *requests* and *beautifulsoup* are used. Only the 
 
 ### ETL
 *Prefect* is used for orchestration of the ETL flow. The flow an easily be monitored from the [Prefect Cloud](https://www.prefect.io/cloud/) platform. 
+![image](https://user-images.githubusercontent.com/39828550/215114016-a70d17af-d7d7-4969-864b-affe0ad73a9b.png)
+
 
 ### Sentiment classification
 Using the TextBlob library the sentiment (negative/neutral/positive) is added to each article. 
